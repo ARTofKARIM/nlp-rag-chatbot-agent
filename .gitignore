@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+data/*.pdf
+data/*.txt
+models/
+venv/
+chroma_db/

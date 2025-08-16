@@ -1,0 +1,19 @@
+embeddings:
+  model: "all-MiniLM-L6-v2"
+  chunk_size: 500
+  chunk_overlap: 50
+vectorstore:
+  type: "chroma"
+  persist_dir: "chroma_db/"
+  collection_name: "documents"
+retrieval:
+  top_k: 5
+  score_threshold: 0.7
+llm:
+  model: "gpt-3.5-turbo"
+  temperature: 0.3
+  max_tokens: 512
+agent:
+  system_prompt: "You are a helpful assistant. Answer questions based on the provided context."
+  memory_type: "buffer"
+  memory_k: 5
